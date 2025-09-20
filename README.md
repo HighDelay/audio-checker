@@ -1,4 +1,4 @@
-# Sample Rate Checker
+# Audio Device Checker
 
 A simple Python script to check the sample rate, bit depth, and channel of your audio devices on Windows.
 
