@@ -53,7 +53,7 @@ def parse_waveformat(ptr):
 
 def get_default_output_format():
     device = AudioUtilities.GetSpeakers()  # default render device
-    interface = device.Activate(IAudioClient._iid_, CLSCTX_ALL, None)
+    interface = device._dev.Activate(IAudioClient._iid_, CLSCTX_ALL, None)
     audio_client = cast(interface, POINTER(IAudioClient))
     mix_ptr = audio_client.GetMixFormat()
     return parse_waveformat(mix_ptr)
